@@ -31,7 +31,7 @@ h1{
 h2{
     text-align: center;
     font-size: 36px;
-    color: white;
+    color: blue;
 }
 
 .fundo{
@@ -48,7 +48,19 @@ h2{
 
 ul{
     list-style: none;
+    margin: 20px;
 }
 
+.container{
+    display: flex;
+    height: 300px;
+    flex-wrap: wrap;
+}
 
+.blocos{
+    flex: 1;
+    height: 100%;
+    background: white;
+    margin: 50px;
+}
 
