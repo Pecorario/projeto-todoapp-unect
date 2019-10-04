@@ -54,7 +54,7 @@ ul{
 
 .container{
     display: flex;
-    height: 450px;
+    height: 400px;
     flex-wrap: wrap;
 }
 
@@ -70,7 +70,35 @@ ul{
 .blocos li{
     margin: 10px;
     text-align: center;
-    background: rgba(49, 49, 45, 0.1);
-    box-sizing: 20px;
+    background: rgba(25, 90, 205, 0.3);
     border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.input{
+    margin-bottom: 20px;
+    border: 2px solid rgb(25, 90, 205);
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+button{
+    background: none;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.add{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.items{
+    margin: 7px;
+}
+
+.add img{
+    width: 55%;
 }
