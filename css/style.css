@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 html, body{
@@ -32,6 +32,7 @@ h2{
     text-align: center;
     font-size: 36px;
     color: blue;
+    margin: 10px;
 }
 
 .fundo{
@@ -48,12 +49,12 @@ h2{
 
 ul{
     list-style: none;
-    margin: 20px;
+    margin: 10px;
 }
 
 .container{
     display: flex;
-    height: 300px;
+    height: 450px;
     flex-wrap: wrap;
 }
 
@@ -62,5 +63,14 @@ ul{
     height: 100%;
     background: white;
     margin: 50px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.16);
 }
 
+.blocos li{
+    margin: 10px;
+    text-align: center;
+    background: rgba(49, 49, 45, 0.1);
+    box-sizing: 20px;
+    border-radius: 10px;
+}
