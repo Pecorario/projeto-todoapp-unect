@@ -105,6 +105,7 @@ button{
 
 .fa-plus-square:hover{
     color: blue;
+    cursor: pointer;   
 }
 
 li:hover{
@@ -113,4 +114,5 @@ li:hover{
 
 .fa-chevron-circle-right:hover{
     color: white;
+    cursor: pointer;   
 }
