@@ -107,4 +107,10 @@ button{
     color: blue;
 }
 
+li:hover{
+    background: blue;
+}
 
+.fa-chevron-circle-right:hover{
+    color: white;
+}
