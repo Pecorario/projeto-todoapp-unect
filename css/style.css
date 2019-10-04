@@ -96,13 +96,15 @@ button{
 }
 
 .items{
-    margin: 7px;
+    margin: 15px;
 }
 
-.add img{
-    width: 55%;
+.fa-plus-square{
+    vertical-align: 10%
 }
 
-#submit:hover{
-    box-shadow: darkgrey;
+.fa-plus-square:hover{
+    color: blue;
 }
+
+
