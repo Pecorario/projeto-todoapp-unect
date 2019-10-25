@@ -121,3 +121,8 @@ li:hover{
     color: white;
     cursor: pointer;   
 }
+
+.fa-times-circle:hover{
+    color: white;
+    cursor: pointer;   
+}
