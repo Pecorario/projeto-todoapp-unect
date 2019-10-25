@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     <section class="fundo">
         <div class="add">
             <div class="items">
-                <input class="input" type="text" placeholder="Adicione uma nova tarefa">
+                <input id="input" type="text" placeholder="Adicione uma nova tarefa">
             </div>
             <div class="items">
                 <span style="color: black;">
@@ -34,10 +34,7 @@
                 <h2>TO DO
                     <i class="fas fa-th-list fa-1x"></i>
                 </h2>
-                <ul class="todo">
-                    <li>Revisar HTML, CSS e JavaScript
-                        <i class="fas fa-chevron-circle-right fa-1x"></i>
-                    </li>
+                <ul id="todo">
                 </ul>
             </div>
 
@@ -46,12 +43,6 @@
                     <i class="fas fa-clock fa-1x"></i>
                 </h2>
                 <ul class="doing">
-                    <li>Fazer o ToDo APP
-                        <i class="fas fa-chevron-circle-right fa-1x"></i>
-                    </li>
-                    <li>Postar meu código no GitHub
-                        <i class="fas fa-chevron-circle-right fa-1x"></i>
-                    </li>
                 </ul>
             </div>
 
@@ -60,10 +51,6 @@
                     <i class="fas fa-check-square fa-1x"></i>
                 </h2>
                 <ul class="done">
-                    <li>Ir às oficinas de CSS e HTML</li>
-                    <li>Ir à oficina de Git e GitHub</li>
-                    <li>Ir à reunião geral</li>
-                    <li>Ir à reunião de projetos</li>
                 </ul>
             </div>
         </div>
@@ -73,6 +60,6 @@
     
 
     
-
+    <script src="./js/script.js"></script>
 </body>
 </html>

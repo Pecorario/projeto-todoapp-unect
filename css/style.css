@@ -75,7 +75,7 @@ ul{
     padding: 5px 10px;
 }
 
-.input{
+#input{
     margin-bottom: 20px;
     border: 2px solid rgb(25, 90, 205);
     width: 100%;
@@ -87,6 +87,7 @@ button{
     background: none;
     border: none;
     margin-bottom: 15px;
+    width: auto;
 }
 
 .add{
@@ -106,6 +107,10 @@ button{
 .fa-plus-square:hover{
     color: blue;
     cursor: pointer;   
+}
+
+.fas{
+    margin-left: 5px;
 }
 
 li:hover{
