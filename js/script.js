@@ -4,7 +4,6 @@ const done = document.querySelector('#done')
 const input = document.querySelector('#input')
 const adicionarBt = document.querySelector('section.fundo button')
 
-
 const excluirItem = (item, lista) => {
 
     let animation = item.animate([{
@@ -20,12 +19,12 @@ const excluirItem = (item, lista) => {
     }
 }
 
-const colunaDoing = (item, lista) => {
- //   const next = document.createElement('i')
+const colunaDone = (item, lista) => {
+    const close = document.createElement('i')
 
- //   next.classList.add('fas')
- //   next.classList.add('fa-chevron-circle-right')
-//    next.classList.add('fa-1x')
+    close.classList.add('fas')
+    close.classList.add('fa-times-circle')
+    close.classList.add('fa-1x')
 
     let animation = item.animate([{
         opacity: '1',
@@ -36,13 +35,65 @@ const colunaDoing = (item, lista) => {
     }], 200)
 
     animation.onfinish = () => {
+/*        
+        item.classList.remove('fas')
+        item.classList.remove('fa-times-circle')
+        item.classList.remove('fa-1x')
+    
+        item.classList.remove('fas')
+        item.classList.remove('fa-chevron-circle-right')
+       item.classList.remove('fa-1x')
+*/ 
+        var copy = item.cloneNode(true)
+
+        copy.append(close)
+        done.appendChild(copy)
+        lista.removeChild(item)
+        close.onclick = () => excluirItem(copy, done)
+    }
+}
+
+const colunaDoing = (item, lista) => {
+    const next = document.createElement('i')
+    const close = document.createElement('i')
+
+    close.classList.add('fas')
+    close.classList.add('fa-times-circle')
+    close.classList.add('fa-1x')
+
+    next.classList.add('fas')
+    next.classList.add('fa-chevron-circle-right')
+    next.classList.add('fa-1x')
+
+    let animation = item.animate([{
+        opacity: '1',
+        transform: 'scale(1)'
+    }, {
+        opacity: '0',
+        transform: 'scale(0.8)'
+    }], 200)
+
+    animation.onfinish = () => {
+/*        
+        item.classList.remove('fas')
+        item.classList.remove('fa-times-circle')
+        item.classList.remove('fa-1x')
+    
+        item.classList.remove('fas')
+        item.classList.remove('fa-chevron-circle-right')
+       item.classList.remove('fa-1x')
+*/ 
         var cop = item.cloneNode(true)
-    //    cop.append(next)
+
+        cop.append(close)
+        cop.append(next)
         doing.appendChild(cop)
         lista.removeChild(item)
-    //    next.onclick = () => excluirItem(li, doing)
-}
+        close.onclick = () => excluirItem(cop, doing)
+        next.onclick = () => colunaDone(cop, doing)
+ 
     }
+}
     
 
 const criarItem = (conteudo) => {
