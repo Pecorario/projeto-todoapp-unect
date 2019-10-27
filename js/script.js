@@ -124,5 +124,8 @@ const criarItem = (conteudo) => {
 }
 
  adicionarBt.onclick = adicionarLista
-
-// load()
+ document.addEventListener('keypress', function(e){
+    if(e.which == 13){
+      adicionarLista();
+    }
+  }, false);

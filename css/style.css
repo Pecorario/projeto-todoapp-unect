@@ -60,7 +60,7 @@ ul{
 
 .blocos{
     flex: 1;
-    height: 100%;
+    width: 350px;
     background: white;
     margin: 10px 50px;
     border-radius: 10px;
