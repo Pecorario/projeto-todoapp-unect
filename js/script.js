@@ -5,7 +5,6 @@ const input = document.querySelector('#input')
 const adicionarBt = document.querySelector('section.fundo button')
 
 const excluirItem = (item, lista) => {
-
     let animation = item.animate([{
         opacity: '1',
         transform: 'scale(1)'
@@ -19,7 +18,8 @@ const excluirItem = (item, lista) => {
     }
 }
 
-const colunaDone = (item, lista) => {
+const colunaDone = (item, lista, conteudo) => {
+    const li = document.createElement('li')
     const close = document.createElement('i')
 
     close.classList.add('fas')
@@ -35,25 +35,16 @@ const colunaDone = (item, lista) => {
     }], 200)
 
     animation.onfinish = () => {
-/*        
-        item.classList.remove('fas')
-        item.classList.remove('fa-times-circle')
-        item.classList.remove('fa-1x')
-    
-        item.classList.remove('fas')
-        item.classList.remove('fa-chevron-circle-right')
-       item.classList.remove('fa-1x')
-*/ 
-        var copy = item.cloneNode(true)
-
-        copy.append(close)
-        done.appendChild(copy)
+        li.innerHTML = conteudo
+        li.append(close)
+        done.appendChild(li)
         lista.removeChild(item)
-        close.onclick = () => excluirItem(copy, done)
+        close.onclick = () => excluirItem(li, done)
     }
 }
 
-const colunaDoing = (item, lista) => {
+const colunaDoing = (item, lista, conteudo) => {
+    const li = document.createElement('li')
     const next = document.createElement('i')
     const close = document.createElement('i')
 
@@ -74,24 +65,13 @@ const colunaDoing = (item, lista) => {
     }], 200)
 
     animation.onfinish = () => {
-/*        
-        item.classList.remove('fas')
-        item.classList.remove('fa-times-circle')
-        item.classList.remove('fa-1x')
-    
-        item.classList.remove('fas')
-        item.classList.remove('fa-chevron-circle-right')
-       item.classList.remove('fa-1x')
-*/ 
-        var cop = item.cloneNode(true)
-
-        cop.append(close)
-        cop.append(next)
-        doing.appendChild(cop)
+        li.innerHTML = conteudo
+        li.append(close)
+        li.append(next)
+        doing.appendChild(li)
         lista.removeChild(item)
-        close.onclick = () => excluirItem(cop, doing)
-        next.onclick = () => colunaDone(cop, doing)
- 
+        close.onclick = () => excluirItem(li, doing)
+        next.onclick = () => colunaDone(li, doing, conteudo)
     }
 }
     
@@ -110,7 +90,7 @@ const criarItem = (conteudo) => {
     next.classList.add('fa-1x')
 
     close.onclick = () => excluirItem(li, todo)
-    next.onclick = () => colunaDoing(li, todo)
+    next.onclick = () => colunaDoing(li, todo, conteudo)
 
     li.innerHTML = conteudo
     li.append(close)
